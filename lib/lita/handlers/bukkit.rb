@@ -23,11 +23,20 @@ module Lita
       private
 
       def extract_image_url_from(resp)
-        page  = Nokogiri::HTML(resp.body)
-        rows  = page.css("tr").slice(2..-1)
-        links = rows.map { |row| row.css("a").first }.compact
-        hrefs = links.map { |link| link.attributes["href"] }.compact.map(&:value)
-        "#{URL}/#{hrefs.sample}"
+        links = parse_rows(Nokogiri::HTML(resp.body)).compact
+        "#{URL}/#{parse_hrefs(links).sample}"
+      end
+
+      def parse_rows(page)
+        extract_rows(page).map { |row| row.css("a").first }
+      end
+
+      def extract_rows(page)
+        page.css("tr").slice(2..-1)
+      end
+
+      def parse_hrefs(links)
+        links.map { |link| link.attributes["href"] }.compact.map(&:value)
       end
     end
 

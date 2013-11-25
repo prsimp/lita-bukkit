@@ -8,4 +8,3 @@ SimpleCov.start { add_filter "/spec/" }
 
 require "lita-bukkit"
 require "lita/rspec"
-require "pry"
