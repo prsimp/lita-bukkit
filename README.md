@@ -1,6 +1,6 @@
 # lita-bukkit
 
-TODO: Add a description of the plugin.
+Grabs a random image from the list of images at [http://bukk.it](http://bukk.it)
 
 ## Installation
 
@@ -12,11 +12,13 @@ gem "lita-bukkit"
 
 ## Configuration
 
-TODO: Describe any configuration attributes the plugin exposes.
+None.
 
 ## Usage
 
-TODO: Describe the plugin's features and how to use them.
+```
+Lita: bukkit me
+```
 
 ## License
 
