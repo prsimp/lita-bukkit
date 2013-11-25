@@ -1,5 +1,7 @@
 # lita-bukkit
 
+[Travis-CI Badge]()[Coveralls Badge]()
+
 Grabs a random image from the list of images at [http://bukk.it](http://bukk.it)
 
 ## Installation
